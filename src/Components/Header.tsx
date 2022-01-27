@@ -10,7 +10,7 @@ export default function Header(){
                 <Nav>
                     <Logo>ExpGain</Logo>
                     <AuthBox>
-                        <Button>Try It For Free</Button>
+                        <Button>Try For Free</Button>
                         <IconStyle src={`https://avatars.githubusercontent.com/u/60555651?v=4`} width={40} height={40}/>
                     </AuthBox>
                 </Nav>
