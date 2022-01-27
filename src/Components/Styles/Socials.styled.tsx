@@ -10,7 +10,7 @@ export const StyledSocialIcons = styled.div`
   a {
     border: 1px solid #fff;
     border-radius: 50%;
-    color: #fff;
+    color: ${({theme}) => theme.colors.text};
     display: inline-flex;
     align-items: center;
     justify-content: center;

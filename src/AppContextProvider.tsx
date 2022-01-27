@@ -1,5 +1,6 @@
 import React, {useState} from 'react';
 import {ThemeProvider} from "styled-components";
+import useLocalStorage, {STORED_VALUES} from "./Components/Hooks/useLocalStorage";
 
 interface IThemeContext {
     dark: boolean;
@@ -30,8 +31,8 @@ const dark = {
 
 const light = {
     colors: {
-        header: '#e7e7e7',
-        button: '#dec0ff',
+        header: '#dadada',
+        button: '#b475ff',
         body: '#e8e8e8',
         footer: '#d3d3d3',
         text: 'black',
@@ -43,7 +44,8 @@ const light = {
 export type ThemeType = typeof dark;
 
 function AppContextProvider({children}: Props) {
-    const [isDarkTheme, setDarkTheme] = useState(defaultState.dark);
+    const [theme] = useLocalStorage(STORED_VALUES.THEME, defaultState.dark);
+    const [isDarkTheme, setDarkTheme] = useState(theme === 'dark' ? defaultState.dark : false);
 
     const themeToggle = () => {
         isDarkTheme ? setDarkTheme(false) : setDarkTheme(true)
