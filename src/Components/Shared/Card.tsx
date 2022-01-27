@@ -1,6 +1,6 @@
 import React from 'react';
-import {CardStyled} from "./Styles/Card.styled";
-import {Flex} from "./Styles/Flex.style";
+import {CardStyled} from "../Styles/Card.styled";
+import {Flex} from "../Styles/Flex.style";
 
 interface Item{
     id: number;

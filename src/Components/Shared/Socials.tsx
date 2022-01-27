@@ -1,6 +1,6 @@
 import React from "react";
 import { FaTwitter, FaFacebook, FaLinkedin } from 'react-icons/fa'
-import {StyledSocialIcons} from "./Styles/Socials.styled";
+import {StyledSocialIcons} from "../Styles/Socials.styled";
 
 export default function SocialIcons() {
     return (

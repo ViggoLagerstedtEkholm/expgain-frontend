@@ -1,9 +1,9 @@
 import React from 'react';
-import {Container} from "./Styles/Container.styled";
-import {Flex} from "./Styles/Flex.style";
-import {StyledFooter} from "./Styles/Footer.styled";
+import {Container} from "../Styles/Container.styled";
+import {Flex} from "../Styles/Flex.style";
+import {StyledFooter} from "../Styles/Footer.styled";
 import SocialIcons from "./Socials";
-import {LargeText} from "./Styles/Texts.style";
+import {LargeText} from "../Styles/Texts.style";
 
 function Footer() {
     return (

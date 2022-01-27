@@ -1,13 +1,14 @@
 import React from 'react';
-import {Flex} from "./Styles/Flex.style";
-import {LargeText, MediumText, Text} from "./Styles/Texts.style";
-import {Button} from "./Styles/Button.styled";
-import content from "./content";
-import Card from "./Card";
+import {Flex} from "../Styles/Flex.style";
+import {LargeText, MediumText, Text} from "../Styles/Texts.style";
+import {Button} from "../Styles/Button.styled";
+import content from "../content";
+import Card from "../Shared/Card";
+import {Page} from "../Styles/Container.styled";
 
 function Home() {
     return (
-        <>
+        <Page>
             <Flex>
                 <div>
                     <LargeText>Opportunities for anybody or anyone.</LargeText>
@@ -24,7 +25,7 @@ function Home() {
             {content.map((item, index) =>(
                 <Card key={index} item={item}/>
             ))}
-        </>
+        </Page>
     );
 }
 

@@ -1,5 +1,5 @@
 import {createGlobalStyle} from "styled-components";
-import {ThemeType} from "../../App";
+import {ThemeType} from "../../AppContextProvider";
 
 export const GlobalStyles = createGlobalStyle<{theme: ThemeType}>`
   @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
