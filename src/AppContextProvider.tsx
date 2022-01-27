@@ -44,11 +44,17 @@ const light = {
 export type ThemeType = typeof dark;
 
 function AppContextProvider({children}: Props) {
-    const [theme] = useLocalStorage(STORED_VALUES.THEME, defaultState.dark);
-    const [isDarkTheme, setDarkTheme] = useState(theme === 'dark' ? defaultState.dark : false);
+    const [theme, setTheme] = useLocalStorage(STORED_VALUES.THEME, defaultState.dark);
+    const [isDarkTheme, setDarkTheme] = useState(theme === 'dark');
 
     const themeToggle = () => {
-        isDarkTheme ? setDarkTheme(false) : setDarkTheme(true)
+        if(isDarkTheme){
+            setDarkTheme(false);
+            setTheme("light");
+        }else{
+            setDarkTheme(true);
+            setTheme("dark");
+        }
     }
 
     const value: IThemeContext = {
