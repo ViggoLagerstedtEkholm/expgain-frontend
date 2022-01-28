@@ -8,6 +8,7 @@ import Home from "./Components/Pages/Home";
 import Footer from "./Components/Shared/Footer";
 import Profile from "./Components/Pages/Profile";
 import AppContextProvider from "./AppContextProvider";
+import Settings from "./Components/Pages/Settings";
 
 function App() {
     return (
@@ -19,6 +20,7 @@ function App() {
                     <Routes>
                         <Route path="/" element={<Home/>}/>
                         <Route path="/profile" element={<Profile/>}/>
+                        <Route path="/settings" element={<Settings/>}/>
                     </Routes>
                 </Container>
                 <Footer/>

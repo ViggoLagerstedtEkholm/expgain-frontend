@@ -1,23 +1,27 @@
-import React, {useContext} from "react";
+import React, {useContext, useState} from "react";
 import {AuthBox, HeaderStyled, IconStyle, Logo, Nav} from "../Styles/Header.styled";
 import {Container} from "../Styles/Container.styled";
-import {LinkStyled} from "../Styles/Link.styled";
+import {LogoLinkStyle} from "../Styles/LogoLinkStyle";
 import {ThemeContext} from "../../AppContextProvider";
 
-import { FaMoon, FaSun } from "react-icons/fa";
+import {FaMoon, FaSun} from "react-icons/fa";
 import {ThemeButtonStyled} from "../Styles/ThemeButton.styled";
+import DropdownMenu from "./DropdownMenu";
 
-export default function Header(){
+export default function Header() {
     const {dark, toggleDark} = useContext(ThemeContext);
+    const [dropdownOpened, setDropdownOpened] = useState(false);
 
-    return(
+    return (
         <HeaderStyled>
             <Container>
                 <Nav>
-                    <LinkStyled to={"/"}><Logo>ExpGain</Logo></LinkStyled>
+                    <LogoLinkStyle to={"/"}><Logo>ExpGain</Logo></LogoLinkStyle>
                     <AuthBox>
                         <ThemeButtonStyled onClick={toggleDark}>{dark ? <FaSun/> : <FaMoon/>}</ThemeButtonStyled>
-                        <LinkStyled to={"/profile"}><IconStyle src={`https://avatars.githubusercontent.com/u/60555651?v=4`} width={40} height={40}/></LinkStyled>
+                        <IconStyle src={`https://avatars.githubusercontent.com/u/60555651?v=4`} width={40} height={40}
+                                   onClick={() => setDropdownOpened(!dropdownOpened)}/>
+                        {dropdownOpened && <DropdownMenu/>}
                     </AuthBox>
                 </Nav>
             </Container>

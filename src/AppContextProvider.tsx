@@ -25,6 +25,7 @@ const dark = {
         footer: '#1d1d1d',
         text: 'white',
         card: '#1f1e22',
+        dropdown: '#3a3a3a'
     },
     mobile: '768px',
 }
@@ -37,6 +38,7 @@ const light = {
         footer: '#d3d3d3',
         text: 'black',
         card: '#fdfdfd',
+        dropdown: '#adadad'
     },
     mobile: '768px',
 }
