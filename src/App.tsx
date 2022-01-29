@@ -9,6 +9,9 @@ import Footer from "./Components/Shared/Footer";
 import Profile from "./Components/Pages/Profile";
 import AppContextProvider from "./AppContextProvider";
 import Settings from "./Components/Pages/Settings";
+import Search from "./Components/Pages/Search";
+import Assignment from "./Components/Pages/Assignment";
+import ScrollToTop from "./Components/Shared/Filter/Misc/ScrollTop";
 
 function App() {
     return (
@@ -17,10 +20,13 @@ function App() {
                 <GlobalStyles/>
                 <Header/>
                 <Container>
+                    <ScrollToTop/>
                     <Routes>
                         <Route path="/" element={<Home/>}/>
                         <Route path="/profile" element={<Profile/>}/>
                         <Route path="/settings" element={<Settings/>}/>
+                        <Route path="/search" element={<Search/>}/>
+                        <Route path="/assignment/:id" element={<Assignment/>}/>
                     </Routes>
                 </Container>
                 <Footer/>

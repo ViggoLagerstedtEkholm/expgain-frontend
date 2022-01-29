@@ -1,6 +1,12 @@
-import React, {useState} from 'react';
+import React, {createContext, Dispatch, useReducer, useState} from 'react';
 import {ThemeProvider} from "styled-components";
 import useLocalStorage, {STORED_VALUES} from "./Components/Hooks/useLocalStorage";
+import {
+    OpenState,
+    initialFilterState,
+    FilterOpenReducer,
+    FilterAction
+} from "./Components/Shared/State/FilterOpenReducer";
 
 interface IThemeContext {
     dark: boolean;
@@ -43,17 +49,28 @@ const light = {
     mobile: '768px',
 }
 
+interface DispatchFilterOpenState {
+    filterOpenState: OpenState;
+    filterOpenDispatch: Dispatch<FilterAction>;
+}
+
+export const FilterOpenContext = createContext<DispatchFilterOpenState>({
+    filterOpenState: initialFilterState,
+    filterOpenDispatch: () => null,
+});
+
 export type ThemeType = typeof dark;
 
 function AppContextProvider({children}: Props) {
     const [theme, setTheme] = useLocalStorage(STORED_VALUES.THEME, defaultState.dark);
     const [isDarkTheme, setDarkTheme] = useState(theme === 'dark');
+    const [filterOpenState, filterOpenDispatch] = useReducer(FilterOpenReducer, initialFilterState);
 
     const themeToggle = () => {
-        if(isDarkTheme){
+        if (isDarkTheme) {
             setDarkTheme(false);
             setTheme("light");
-        }else{
+        } else {
             setDarkTheme(true);
             setTheme("dark");
         }
@@ -64,11 +81,15 @@ function AppContextProvider({children}: Props) {
         toggleDark: themeToggle
     }
 
+    const filterOpen = {filterOpenState, filterOpenDispatch};
+
     return (
         <ThemeContext.Provider value={value}>
-            <ThemeProvider theme={isDarkTheme ? dark : light}>
-                {children}
-            </ThemeProvider>
+            <FilterOpenContext.Provider value={filterOpen}>
+                <ThemeProvider theme={isDarkTheme ? dark : light}>
+                    {children}
+                </ThemeProvider>
+            </FilterOpenContext.Provider>
         </ThemeContext.Provider>
     );
 }

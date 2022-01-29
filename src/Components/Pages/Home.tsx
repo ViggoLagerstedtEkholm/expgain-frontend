@@ -5,8 +5,11 @@ import {Button} from "../Styles/Button.styled";
 import content from "../content";
 import Card from "../Shared/Card";
 import {Page} from "../Styles/Container.styled";
+import {useNavigate} from "react-router-dom";
 
 function Home() {
+    const navigate = useNavigate();
+
     return (
         <Page>
             <Flex>
@@ -16,7 +19,7 @@ function Home() {
                     <MediumText>
                         Join today to offer your skill-set and gain experience using ExpGain.
                     </MediumText>
-                    <Button>
+                    <Button onClick={() => navigate('/search')}>
                         Find available postings.
                     </Button>
                 </div>
