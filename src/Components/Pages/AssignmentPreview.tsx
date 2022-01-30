@@ -2,8 +2,11 @@ import React from 'react';
 import {Posting} from "../Styles/Filter/FilterBox.styled";
 import {LargeText, MediumText, Text} from "../Styles/Texts.style";
 import {Button} from "../Styles/Button.styled";
+import {useNavigate} from "react-router-dom";
 
 function AssignmentPreview() {
+    const navigate = useNavigate();
+
     return (
         <Posting>
             <LargeText>Example.</LargeText>
@@ -22,7 +25,7 @@ function AssignmentPreview() {
                 Date - 2022-2023 (1 year)
             </Text>
 
-            <Button>More</Button>
+            <Button onClick={() => navigate("/assignment/5")}>More</Button>
         </Posting>
     );
 }

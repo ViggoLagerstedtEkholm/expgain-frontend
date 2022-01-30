@@ -25,6 +25,7 @@ function FilterConfigurationBox() {
                 <CustomizableFilterHeader>
                     <MediumText>Search</MediumText>
                     <SearchBar type="text"/>
+                    
                 </CustomizableFilterHeader>
             }
         </>

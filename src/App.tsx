@@ -12,6 +12,7 @@ import Settings from "./Components/Pages/Settings";
 import Search from "./Components/Pages/Search";
 import Assignment from "./Components/Pages/Assignment";
 import ScrollToTop from "./Components/Shared/Filter/Misc/ScrollTop";
+import Company from "./Components/Pages/Company";
 
 function App() {
     return (
@@ -27,6 +28,7 @@ function App() {
                         <Route path="/settings" element={<Settings/>}/>
                         <Route path="/search" element={<Search/>}/>
                         <Route path="/assignment/:id" element={<Assignment/>}/>
+                        <Route path="/company/:name" element={<Company/>}/>
                     </Routes>
                 </Container>
                 <Footer/>
