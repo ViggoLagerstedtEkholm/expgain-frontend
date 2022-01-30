@@ -13,7 +13,7 @@ export const StyledFooter = styled.footer`
   p {
     text-align: right;
   }
-  @media (max-width: ${({ theme }) => theme.mobile}) {
+  @media (max-width: ${({ theme }) => theme.sm}) {
     text-align: center;
     ul {
       padding: 0;

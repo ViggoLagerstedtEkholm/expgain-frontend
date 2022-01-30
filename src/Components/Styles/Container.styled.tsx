@@ -7,8 +7,9 @@ export const Container = styled.div`
   margin: 0 auto;
   color: ${({theme}) => theme.colors.text};
 
-  @media (max-width: ${({ theme }) => theme.mobile}) {
+  @media (max-width: ${({ theme }) => theme.sm}) {
     padding: 0 10px;
+    text-align: center;
   }
 `
 
@@ -20,7 +21,7 @@ export const Page = styled.div`
   margin: 20px 0 auto;
   color: ${({theme}) => theme.colors.text};
 
-  @media (max-width: ${({ theme }) => theme.mobile}) {
+  @media (max-width: ${({ theme }) => theme.sm}) {
     flex-direction: column;
     padding: 0;
   }

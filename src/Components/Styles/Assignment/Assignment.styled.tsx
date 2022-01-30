@@ -4,7 +4,7 @@ export const AssignmentLayout = styled.div`
   display: flex;
   gap: 25px;
   
-  @media (max-width: ${({ theme }) => theme.mobile}) {
+  @media (max-width: ${({theme}) => theme.xl}) {
     flex-direction: column;
     text-align: center;
   }
@@ -14,8 +14,8 @@ export const AssignmentInfo = styled.div`
   width: 75%;
   background-color: ${({ theme }) => theme.colors.card};
   border-radius: 5px;
-
-  @media (max-width: ${({ theme }) => theme.mobile}) {
+  
+  @media (max-width: ${({theme}) => theme.xl}) {
     width: 100%;
   }
 `
@@ -32,7 +32,7 @@ export const CompanyInfo = styled.div`
   width: 25%;
   padding-left: 15px;
 
-  @media (max-width: ${({ theme }) => theme.mobile}) {
+  @media (max-width: ${({theme}) => theme.xl}) {
     width: 100%;
   }
 `

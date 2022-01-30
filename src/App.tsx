@@ -8,7 +8,7 @@ import Home from "./Components/Pages/Home";
 import Footer from "./Components/Shared/Footer";
 import Profile from "./Components/Pages/Profile";
 import AppContextProvider from "./AppContextProvider";
-import Settings from "./Components/Pages/Settings";
+import Settings from "./Components/Pages/Settings/Settings";
 import Search from "./Components/Pages/Search";
 import Assignment from "./Components/Pages/Assignment";
 import ScrollToTop from "./Components/Shared/Filter/Misc/ScrollTop";

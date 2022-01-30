@@ -8,7 +8,7 @@ export const Flex = styled.div`
     flex: 1;
   }
 
-  @media (max-width: ${({ theme }) => theme.mobile}) {
+  @media (max-width: ${({ theme }) => theme.sm}) {
     flex-direction: column;
     text-align: center;
   }

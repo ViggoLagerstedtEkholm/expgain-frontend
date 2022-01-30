@@ -9,7 +9,8 @@ export const Nav = styled.nav`
   display: flex;
   align-items: center;
   justify-content: space-between;
-  @media (max-width: ${({theme}) => theme.mobile}) {
+  
+  @media (max-width: ${({theme}) => theme.sm}) {
     flex-direction: column;
     padding-bottom: 15px;
   }
@@ -20,7 +21,8 @@ export const AuthBox = styled.div`
   justify-content: center;
   gap: 25px;
   align-items: center;
-  @media (max-width: ${({theme}) => theme.mobile}) {
+  
+  @media (max-width: ${({theme}) => theme.sm}) {
     flex-direction: column;
   }
 `
@@ -63,10 +65,9 @@ export const DropdownMenuStyle = styled.div`
     -webkit-box-shadow: inset 0 0 6px rgba(185, 185, 185, 0.5);
   }
 
-  @media (max-width: ${({ theme }) => theme.mobile}) {
+  @media (max-width: ${({ theme }) => theme.sm}) {
     top: 320px;
     margin-left: 50%;
-
   }
 `
 

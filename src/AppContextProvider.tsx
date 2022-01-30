@@ -33,7 +33,10 @@ const dark = {
         card: '#1f1e22',
         dropdown: '#3a3a3a'
     },
-    mobile: '768px',
+    sm: '600px',
+    md: '768px',
+    lg: '992px',
+    xl: '1200px',
 }
 
 const light = {
@@ -46,7 +49,10 @@ const light = {
         card: '#fdfdfd',
         dropdown: '#adadad'
     },
-    mobile: '768px',
+    sm: '600px',
+    md: '768px',
+    lg: '992px',
+    xl: '1200px',
 }
 
 interface DispatchFilterOpenState {

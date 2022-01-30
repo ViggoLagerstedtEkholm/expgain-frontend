@@ -26,7 +26,7 @@ export const SearchBar = styled.input`
   padding: 10px;
   width: 100%;
   
-  @media (max-width: ${({ theme }) => theme.mobile}) {
+  @media (max-width: ${({ theme }) => theme.sm}) {
     flex-direction: column;
     margin: 20px 0;
   }

@@ -36,7 +36,7 @@ export const Posting = styled.div`
     flex: 1;
   }
 
-  @media (max-width: ${({theme}) => theme.mobile}) {
+  @media (max-width: ${({theme}) => theme.sm}) {
     flex-direction: column;
     margin: 20px 0;
   }
