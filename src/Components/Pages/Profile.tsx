@@ -20,6 +20,7 @@ function Profile() {
                 </Text>
             </ProfileHeaderCard>
 
+            <MediumText>Application overview</MediumText>
         </Page>
     );
 }

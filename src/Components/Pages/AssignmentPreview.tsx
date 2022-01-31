@@ -25,7 +25,7 @@ function AssignmentPreview() {
                 Date - 2022-2023 (1 year)
             </Text>
 
-            <Button onClick={() => navigate("/assignment/5")}>More</Button>
+            <Button btnColor="#b475ff" onClick={() => navigate("/assignment/5")}>More</Button>
         </Posting>
     );
 }

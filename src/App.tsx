@@ -13,6 +13,9 @@ import Search from "./Components/Pages/Search";
 import Assignment from "./Components/Pages/Assignment";
 import ScrollToTop from "./Components/Shared/Filter/Misc/ScrollTop";
 import Company from "./Components/Pages/Company";
+import Leaderboard from "./Components/Pages/Leaderboard";
+import ExpGainPlus from "./Components/Pages/ExpGainPlus";
+import Certification from "./Components/Pages/Certification";
 
 function App() {
     return (
@@ -29,6 +32,9 @@ function App() {
                         <Route path="/search" element={<Search/>}/>
                         <Route path="/assignment/:id" element={<Assignment/>}/>
                         <Route path="/company/:name" element={<Company/>}/>
+                        <Route path="/leaderboard" element={<Leaderboard/>}/>
+                        <Route path="/plus" element={<ExpGainPlus/>}/>
+                        <Route path="/certification" element={<Certification/>}/>
                     </Routes>
                 </Container>
                 <Footer/>

@@ -1,7 +1,7 @@
 import React, {ReactNode, useEffect, useState} from 'react';
 import {Page} from "../../Styles/Container.styled";
 import {LargeText} from "../../Styles/Texts.style";
-import {SelectMenu, SettingsLayout, SettingsPanel} from "../../Styles/Settings/Settings.styled";
+import {SettingsLayout} from "../../Styles/Settings/Settings.styled";
 import SettingsMenu from "../../Shared/SettingsMenu";
 import Panel from "./Panel";
 import Account from "./Account";
@@ -11,7 +11,7 @@ import History from "./History";
 
 function Settings() {
     const [pageIndex, setPageIndex] = useState(0);
-    const [page, setPage] = useState<null | ReactNode>(<Account/>);
+    const [page, setPage] = useState<ReactNode>(<Account/>);
 
     useEffect(() => {
         switch (pageIndex){

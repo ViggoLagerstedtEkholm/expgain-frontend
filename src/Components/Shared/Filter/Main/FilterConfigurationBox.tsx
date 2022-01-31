@@ -20,7 +20,7 @@ function FilterConfigurationBox() {
 
     return (
         <>
-            <Button onClick={toggle}>Toggle filtering</Button>
+            <Button btnColor="#b475ff" onClick={toggle}>Toggle filtering</Button>
             {showFilterBoxState &&
                 <CustomizableFilterHeader>
                     <MediumText>Search</MediumText>

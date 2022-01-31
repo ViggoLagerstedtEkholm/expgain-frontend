@@ -28,7 +28,7 @@ function Assignment() {
                             non proident, sunt in culpa qui officia deserunt mollit anim id est laborum
                         </Text>
                         <Date>Project scope: 2022-2023</Date>
-                        <Button>Apply</Button>
+                        <Button btnColor="#b475ff">Apply</Button>
                     </AssignmentText>
                 </AssignmentInfo>
 
@@ -42,7 +42,7 @@ function Assignment() {
                         voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat
                         non proident, sunt in culpa qui officia deserunt mollit anim id est laborum
                     </Text>
-                    <Button onClick={() => navigate('/company/ExpGain')}>Visit company profile</Button>
+                    <Button btnColor="#b475ff" onClick={() => navigate('/company/ExpGain')}>Visit company profile</Button>
                 </CompanyInfo>
             </AssignmentLayout>
         </Page>

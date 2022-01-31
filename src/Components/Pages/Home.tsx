@@ -19,9 +19,24 @@ function Home() {
                     <MediumText>
                         Join today to offer your skill-set and gain experience using ExpGain.
                     </MediumText>
-                    <Button onClick={() => navigate('/search')}>
-                        Find available postings.
-                    </Button>
+
+                    <div>
+                        <Button btnColor="#b475ff" onClick={() => navigate('/search')}>
+                            Find available postings.
+                        </Button>
+                    </div>
+
+                    <div>
+                        <Button btnColor="#4287f5" onClick={() => navigate('/leaderboard')}>
+                            Go to leaderboard.
+                        </Button>
+                    </div>
+
+                    <div>
+                        <Button btnColor="#286900" onClick={() => navigate('/certification')}>
+                            Certifications.
+                        </Button>
+                    </div>
                 </div>
             </Flex>
 

@@ -22,7 +22,6 @@ function Card({item}: Props) {
                 </div>
 
                 <div>
-
                 </div>
             </Flex>
         </CardStyled>
