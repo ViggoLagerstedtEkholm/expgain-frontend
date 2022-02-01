@@ -2,7 +2,9 @@ import React from 'react';
 
 function Cv() {
     return (
-        <div>CV</div>
+        <div>
+            <input type="file"/>
+        </div>
     );
 }
 
